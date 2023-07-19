@@ -5,3 +5,134 @@
 @import "sass/reset";
 @import "sass/typography";
 
+/** Header Styles */
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: $bg-dark-100;
+  filter: blur(1);
+  padding: 0 10rem;
+
+  .navbar {
+    @include flex-column;
+    @include flex-center;
+    .logo {
+      flex: 0 0 auto;
+    }
+    &-tabs {
+      @include flex-row;
+      flex: 1 0 auto;
+    }
+    &-menu {
+      @include flex-column;
+      @include flex-center;
+      flex: 1 0 auto;
+      &__content {
+        @include flex-row;
+        align-items: center;
+        &-item {
+          margin: 0 1rem;
+          a {
+            color: $white;
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+
+    &-social {
+      &__content {
+        @include flex-row;
+
+        &-item {
+          margin: 0 1rem;
+          a {
+            svg {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mediaQuery(phone) {
+    .navbar {
+      @include flex-row;
+      @include flex-between;
+
+      .social-tabs {
+        &__content {
+          @include flex-row;
+          &-item {
+            margin: 0 1rem;
+            a {
+              svg {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/** Main Section Styles */
+
+.main {
+  @include flex-column;
+  @include flex-center;
+
+  margin-top: 10rem;
+  padding: 0 1rem;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  text-align: center;
+  &-image {
+    margin-bottom: 4rem;
+  }
+
+  &-title {
+    margin-bottom: 0.7rem;
+  }
+
+  &-paragraph {
+    // color: $text-08;
+    font-size: 1.4rem;
+    margin-bottom: 5rem;
+  }
+
+  &-button {
+    border: 1px solid $white;
+    border-radius: 3px;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+  }
+
+  ::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background-color: $white;
+    width: 2px;
+    height: 25.5%;
+  }
+
+  @include mediaQuery(phone) {
+  }
+}
+
+/** About Section Styles */
+
+.about {
+  @include flex-column;
+  &-description {
+  }
+
+  &-image {
+    figure {
+    }
+  }
+}

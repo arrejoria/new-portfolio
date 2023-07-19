@@ -2,29 +2,44 @@
 // - Mobile: 375px
 // - Desktop: 1440px
 
-// Primary Colors
 
-$pale-blue: hsl(225, 100%, 94%);
-$brigh-blue: hsl(245, 75%, 52%);
-
-// Neutral Colors
-
-$very-pale-blue: hsl(225, 100%, 98%);
-$desaturated-blue: hsl(224, 23%, 55%);
-$dark-blue: hsl(223, 47%, 23%);
 
 // Typography
+$fa-headings: 'Pathway Gothic One', sans-serif;;
+$fa-body: 'Albert Sans', sans-serif;
 
 // Body Copy
 $paragraph-size: 16px;
 
-$font-weight-1: 900;
-$font-weight-2: 700;
-$font-weight-3: 500;
+/** Primary Colors**/
+$primary: #141414;
+$pale-blue: hsl(225, 100%, 94%);
+$brigh-blue: hsl(245, 75%, 52%);
 
+$secondary: #205C8D;
+$light-gray: #ebebeb;
+$primary-100:#FF5722;
+$primary-200:#ff8a50;
+$primary-300:#fff3b0;
+$accent-100:#4CAF50;
+$accent-200:#005100;
+$text-100:#333333;
+$text-08:hsla(0, 0%, 67%, 0.8);
+$bg-100:#F5F5F5;
+$bg-200:#ebebeb;
+$bg-300:#c2c2c2;
+$bg-dark-100: hsla(0, 0%, 8%, 0.4);
+/** Neutral Colors**/
 
-// Breakpoint Sass Variables
+$dark-primary: #141414;
+$dark-gray: #3D3D3D;
+$white: #fff;
+$black: #000;
+
+/** Breakpoint Sass Variables**/
+$breakpoint-mobile-sm: 30em;
 $breakpoint-mobile: 37.5em;
+$breakpoint-tablet: 48em;
 $breakpoint-desktop: 90em;
 $breakpoint-desktop-medium: 105em;
 $breakpoint-desktop-large: 120em;

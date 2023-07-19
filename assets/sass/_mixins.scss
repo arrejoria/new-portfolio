@@ -36,6 +36,13 @@
 }
 
 @mixin mediaQuery($breakpoint) {
+
+  @if $breakpoint == smallPhone {
+    @media only screen and (min-width: $breakpoint-mobile-sm){
+      @content;
+    }
+  }
+
   @if $breakpoint == phone {
     @media only screen and (min-width: $breakpoint-mobile) {
       @content;
