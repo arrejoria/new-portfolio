@@ -7,11 +7,27 @@ html {
   @media only screen and (min-width: $breakpoint-desktop) {
     font-size: 70%;
   }
+
+  // /* Estilos para el tema light (claro) */
+  // .light {
+  //   background-color: #f9f9f9;
+  //   color: #141414;
+  // }
+
+  // /* Estilos para el tema dark (oscuro) */
+  // .dark {
+  //   background-color: #141414;
+  //   color: #f9f9f9;
+  // }
+
+}
+
+* {
+  color: $white;
 }
 
 body {
-  background-color: $dark-primary;
-  color: $white;
+  background-color: $primary;
   font-family: $fa-body;
 
   &::before {
@@ -24,7 +40,7 @@ body {
     background-position: center;
     filter: blur(4px);
     width: 100%;
-    height: calc(100vh + 5rem);
+    height: calc(100vh + 2.2rem);
     z-index: -1;
   }
 
@@ -35,8 +51,8 @@ body {
       background-position: center;
     }
   }
-}
 
+}
 
 .container-full {
   width: 100%;

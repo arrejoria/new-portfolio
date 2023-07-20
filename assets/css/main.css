@@ -14,9 +14,12 @@ html {
   }
 }
 
+* {
+  color: #fff;
+}
+
 body {
   background-color: #141414;
-  color: #fff;
   font-family: "Albert Sans", sans-serif;
 }
 body::before {
@@ -29,7 +32,7 @@ body::before {
   background-position: center;
   filter: blur(4px);
   width: 100%;
-  height: calc(100vh + 5rem);
+  height: calc(100vh + 2.2rem);
   z-index: -1;
 }
 @media only screen and (min-width: 30em) {
@@ -132,7 +135,7 @@ ul {
 
 hr {
   margin-top: 1.5rem;
-  border: 1px solid rgba(144, 144, 144, 0.5);
+  border: 1px solid #fff;
 }
 
 /** Headings **/
@@ -166,13 +169,43 @@ p {
   margin: 0;
 }
 
+/** Loader */
+.loading__dev {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rem;
+  font-size: 5rem;
+}
+.loading__dev span {
+  padding-top: 10px;
+  font-size: 2rem;
+}
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-spinner-3:before {
+  content: "\e002";
+}
+
 /** Header Styles */
 .header {
-  background-color: hsla(0deg, 0%, 8%, 0.4);
-  filter: blur(1);
   position: fixed;
+  background: linear-gradient(180deg, var(--black-3) 0%, rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(4px);
   top: 0;
   padding: 0 10rem;
+  z-index: 4;
 }
 .header .navbar {
   display: flex;
@@ -186,7 +219,9 @@ p {
 .header .navbar-tabs {
   display: flex;
   flex-direction: row;
+  align-items: center;
   flex: 1 0 auto;
+  gap: 1rem;
 }
 .header .navbar-menu {
   display: flex;
@@ -213,6 +248,15 @@ p {
 }
 .header .navbar-social__content-item {
   margin: 0 1rem;
+}
+.header .navbar #theme-toggle {
+  border-radius: 10px;
+  border: 1px solid #3D3D3D;
+  padding: 0.8rem;
+  transition: all 0.5s ease-in-out;
+}
+.header .navbar #theme-toggle:hover {
+  border-color: #fff;
 }
 @media only screen and (min-width: 37.5em) {
   .header .navbar {
@@ -251,10 +295,10 @@ p {
   margin-bottom: 8rem;
 }
 .main-button {
-  color: white;
   position: relative;
   border: 1px solid #fff;
   border-radius: 3px;
+  color: #fff;
   font-size: 2rem;
   padding: 1rem 3rem;
 }
@@ -279,9 +323,38 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   flex-direction: column-reverse;
-  background-color: #ebebeb;
   padding-top: 4rem;
+  border-top: 1px solid #fff;
+  overflow: hidden;
+}
+.about::before {
+  content: "";
+  background-image: url(../images/about-bg-1.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: matrix(0, 1, 1, 0, 0, 0) rotate(270deg) translateY(25rem);
+  z-index: -1;
+}
+.about::after {
+  content: "";
+  background-image: linear-gradient(0deg, #141414, #0f1524, #000);
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 .about-description {
   color: #141414;
@@ -290,6 +363,9 @@ p {
   margin-top: 2rem;
   text-align: center;
   width: 90vw;
+}
+.about-description h2 {
+  margin-bottom: 1rem;
 }
 .about-description hr {
   margin: 0 auto;
@@ -314,7 +390,12 @@ p {
     justify-content: space-evenly;
     padding-top: 270px;
   }
+  .about::before {
+    background-size: contain;
+    transform: matrix(0, 1, 1, 0, 0, 0) rotate(270deg) translateY(25rem);
+  }
   .about-description {
+    color: #fff;
     padding: 0 1rem;
     text-align: inherit;
     width: 40vw;
@@ -326,9 +407,147 @@ p {
   .about-image figure img {
     aspect-ratio: 2/1;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     height: 100%;
     width: 30vw;
+  }
+}
+
+/** Skills Section Styles */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+}
+.skills::before {
+  position: absolute;
+  content: "";
+  left: 40%;
+  top: -160px;
+  background: radial-gradient(52.42% 52.36% at 39.89% 51.36%, rgba(69, 62, 151, 0.8901960784) 0%, rgba(18, 19, 29, 0) 70%);
+  background-size: 1200px 100%;
+  width: 1200px;
+  height: 1200px;
+  z-index: -1;
+}
+.skills__intro {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.skills__logos {
+  overflow: hidden;
+  padding: 1rem 0;
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+}
+.skills .logo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem 0;
+  place-items: center;
+  width: 100%;
+}
+.skills .logo__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 20px;
+  background-color: #8c98ff;
+  padding: 2rem;
+  width: 100%;
+  height: auto;
+  max-width: 70px;
+  max-height: 70px;
+  animation: scaleIn 1s ease-in-out infinite alternate;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.2);
+}
+.skills .logo__image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(120deg, #5c589f 4.89%, #58559c 50%, #25244d 102%);
+}
+.skills .logo__image::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  border-radius: inherit;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  z-index: -1;
+  background: linear-gradient(135deg, #b4b3ff 0.46%, rgba(136, 135, 185, 0.5) 45.36%, rgba(174, 173, 246, 0.5) 96.24%);
+}
+.skills .logo__image img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  min-height: 80px;
+  max-height: 80px;
+  z-index: 1;
+}
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.skills__lines, .skills__lines--2 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+}
+.skills__lines svg, .skills__lines--2 svg {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.skills__lines svg line, .skills__lines--2 svg line {
+  stroke: white;
+  stroke-width: 0.07;
+}
+.skills__lines--2 {
+  transform: rotate(90deg);
+  transform-origin: center center;
+}
+@media only screen and (min-width: 37.5em) {
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .skills__intro {
+    font-size: 1.6rem;
+    padding: 0 10rem;
+    text-align: left;
+  }
+  .skills .logo__image {
+    max-width: 110px;
+    max-height: 110px;
+  }
+  .skills__lines, .skills__lines--2 {
+    opacity: 1;
   }
 }
 
