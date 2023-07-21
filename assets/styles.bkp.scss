@@ -4,8 +4,6 @@
 @import "sass/base";
 @import "sass/reset";
 @import "sass/typography";
-@import "sass/avatar";
-
 
 /** Loader ------------------------------*/
 .loading {
@@ -46,7 +44,7 @@
   background: linear-gradient(180deg, var(--black-3) 0%, rgba(0, 0, 0, 0) 100%);
   backdrop-filter: blur(4px);
   top: 0;
-  padding: 0;
+  padding: 0 10rem;
   z-index: 4;
 
   .navbar {
@@ -106,7 +104,6 @@
   }
 
   @include mediaQuery(phone) {
-    padding: 0 10rem;
     .navbar {
       @include flex-row;
       @include flex-between;
@@ -217,7 +214,6 @@
     left: 0;
     z-index: -2;
   }
-
   &__description {
     font-size: 1.6rem;
     line-height: 2;
@@ -237,98 +233,17 @@
     }
   }
 
-  &__card {
-    @include flex-column;
-    @include flex-center;
-    position: relative;
-    background: none;
-    border: none;
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: -2rem;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      background-color: rgb(0, 0, 0, 0.1);
-      backdrop-filter: blur(0.01rem);
-      -webkit-backdrop-filter: blur(0.01rem);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      z-index: -1;
-    }
-  }
-
-  .card {
-    &__content {
-      @include flex-column;
-      justify-content: center;
-      align-items: center;
-      background-color: $white;
-      border: 3px solid $grey-3;
-      box-shadow: 5px 5px 0 0 $grey-4;
-      border-radius: 5px;
-      padding: 2rem 0;
-      width: 300px;
-      height: 350px;
-
-      .card__title,
-      .card__description,
-      .avatar__image {
-        transition: transform 0.8s ease;
-      }
-      &:hover {
-        .card__title,
-        .card__description,
-        .avatar__image {
-          transform: translateY(-14px);
-          transition: all 0.8s ease;
-        }
-      }
-      &:hover .card__buttons {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0px);
-      }
-    }
-
-    &__title,
-    &__description {
-      font-family: $fa-body-1;
-      color: $black-1;
-      word-spacing: 2px;
-    }
-
-    &__title {
-      font-size: 1.8rem;
-      font-weight: 400;
-      letter-spacing: -1px;
-      text-transform: uppercase;
-    }
-    &__description {
-      color: $grey-5;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      letter-spacing: 4px;
-    }
-    &__buttons {
-      transform: none;
-      transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
-
-      ul {
-        @include flex-row;
-        li {
-          padding: 0 1rem;
-          a i {
-            font-size: 3rem;
-            color: $black-1;
-          }
-        }
-      }
-    }
-  }
+  // &-image {
+  //   padding: 0 2rem;
+  //   figure {
+  //     img {
+  //       aspect-ratio: 2/1;
+  //       object-fit: cover;
+  //       border-radius: 1rem;
+  //       width: auto;
+  //     }
+  //   }
+  // }
 
   @include mediaQuery(phone) {
     @include flex-row;
@@ -350,15 +265,13 @@
         width: 220px;
       }
     }
-    .card {
-      &::before {
-        right: 100px;
-      }
-
-      &__buttons {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(34px);
+    &-image figure {
+      img {
+        aspect-ratio: 2/1;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        height: 100%;
+        width: 30vw;
       }
     }
   }
@@ -589,6 +502,7 @@
 // background-repeat: no-repeat;
 // border-radius: 30%;
 // }
+
 
 // /* delete */
 // .photo-card::before {

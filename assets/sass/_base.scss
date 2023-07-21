@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Raleway:wght@400;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Raleway:wght@100;300;400;700;900&display=swap');
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 10 PX = 1rem**/
@@ -54,6 +54,14 @@ body {
 
 }
 
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+}
+
 .container-full {
   width: 100%;
   margin: 0 auto;
@@ -64,7 +72,11 @@ body {
   margin: 0 auto;
 }
 
-.section {
+.section-md {
+  padding: 140px 0;
+}
+
+.section-xl {
   padding: 270px 0;
 }
 

@@ -20,3 +20,12 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', 'light');
   }
 });
+
+
+
+// Avatar Scripts
+const avatarCard = document.querySelector('.card__content');
+const myAvatar = document.getElementById('myAvatar'), 
+      avHair = document.getElementById('hair');
+
+

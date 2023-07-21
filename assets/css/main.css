@@ -2,7 +2,7 @@
 /** Primary Colors**/
 /** Neutral Colors**/
 /** Breakpoint Sass Variables**/
-@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Raleway:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Raleway:wght@100;300;400;700;900&display=swap");
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 10 PX = 1rem**/
@@ -43,6 +43,14 @@ body::before {
   }
 }
 
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+}
+
 .container-full {
   width: 100%;
   margin: 0 auto;
@@ -53,7 +61,11 @@ body::before {
   margin: 0 auto;
 }
 
-.section {
+.section-md {
+  padding: 140px 0;
+}
+
+.section-xl {
   padding: 270px 0;
 }
 
@@ -169,7 +181,79 @@ p {
   margin: 0;
 }
 
-/** Loader */
+.about .card__content:is(:hover) #g_eyes-closed {
+  opacity: 1;
+}
+.about .card__content:is(:hover) #g_eyes-open {
+  opacity: 0;
+}
+.about .card__content:is(:hover) #hair {
+  d: path("M 145.89 16.49 c -5.77 -4.3 -12.58 -8 -19.69 -9.39 S 114.59 5.31 107.47 7 c -1.83 0.43 -2.45 0.87 -4.06 -0.17 C 102.05 6 92.58 -3.79 63.7 1.63 C 34.51 7.11 25.84 51 15 52.71 c -3.91 0.61 -8.73 -0.43 -8.88 -2.83 c -3.12 7.12 -5.12 20.12 7.88 29.12 a 32.23 32.23 0 0 0 18.74 4 a 25.22 25.22 0 0 0 7.89 -2 c 3.09 -1.36 5.56 -3.8 8.59 -5.09 a 60.65 60.65 0 0 1 -10.29 7.19 a 24.89 24.89 0 0 1 -5.73 2.27 c -1.38 0.38 -4.22 1.66 -5.55 1.32 a 40.65 40.65 0 0 0 25 -3.54 a 58.26 58.26 0 0 0 10.3 -6.14 c 3.18 -2.39 6.83 -4.83 9.32 -8 c -1 1.35 0.78 -0.66 1 -0.9 q 1 -1.05 2 -2.13 c 1.12 -1.24 2.23 -2.5 3.28 -3.8 A 83.17 83.17 0 0 0 77 73 C 92 65 93.76 49.43 96 46.49 c -2.14 6.4 2 13.51 -3 19.51 c 6 -1 10.41 -6.22 13.79 -10.47 a 33.14 33.14 0 0 0 6.85 -16.44 c 4.28 11.67 18.36 14.91 19.36 28.91 c 3 -7 3 -10 -0 -14 c 11 10 27.54 15.58 29 36 c 1.16 -5.34 4.88 -9.62 7 -19 a 81.21 81.21 0 0 0 1.93 -18.63 C 167 31 156.57 24.45 145.89 16.49 Z") !important;
+}
+.about .avatar {
+  transition: all 1s ease-in-out;
+}
+.about .avatar {
+  position: relative;
+}
+.about .avatar__bubble {
+  position: absolute;
+  top: -10px;
+  right: -50px;
+  color: #242636;
+  padding: 0.8rem;
+  background: radial-gradient(circle at 50%, black black);
+}
+.about .avatar__bubble::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-right: 1px solid #0e0e16;
+  background-color: #fff;
+  transform: translate(1px, 15px) rotate(200deg);
+}
+.about .avatar__bubble::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-bottom: 1px/2px solid #0e0e16;
+  transform: translate(1px, 15px) rotate(0);
+}
+.about .avatar__image {
+  position: relative;
+  background-color: #d4d4e1;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  width: 100px;
+}
+.about .avatar__image #eyes {
+  opacity: 0;
+  position: absolute;
+  top: 37%;
+  left: 35%;
+}
+.about .avatar__image #eyes .eye-1 {
+  fill: none;
+  stroke: #282828;
+  stroke-miterlimit: 5;
+  stroke-width: 13;
+  stroke-linecap: round;
+}
+.about .avatar__image #eyes .eye-2 {
+  fill: none;
+  stroke: #282828;
+  stroke-miterlimit: 5;
+  stroke-width: 13;
+  stroke-linecap: round;
+}
+
+/** Loader ------------------------------*/
 .loading__dev {
   display: flex;
   flex-direction: row;
@@ -177,6 +261,7 @@ p {
   justify-content: center;
   margin-top: 20rem;
   font-size: 5rem;
+  animation-timeline: "2";
 }
 .loading__dev span {
   padding-top: 10px;
@@ -198,13 +283,13 @@ p {
   content: "\e002";
 }
 
-/** Header Styles */
+/** Header Styles ------------------------------*/
 .header {
   position: fixed;
   background: linear-gradient(180deg, var(--black-3) 0%, rgba(0, 0, 0, 0) 100%);
   backdrop-filter: blur(4px);
   top: 0;
-  padding: 0 10rem;
+  padding: 0;
   z-index: 4;
 }
 .header .navbar {
@@ -259,6 +344,9 @@ p {
   border-color: #fff;
 }
 @media only screen and (min-width: 37.5em) {
+  .header {
+    padding: 0 10rem;
+  }
   .header .navbar {
     display: flex;
     flex-direction: row;
@@ -274,7 +362,7 @@ p {
   }
 }
 
-/** Main Section Styles */
+/** Main Section Styles ------------------------------*/
 .main {
   display: flex;
   flex-direction: column;
@@ -317,7 +405,7 @@ p {
   }
 }
 
-/** About Section Styles */
+/** About Section Styles ------------------------------*/
 .about {
   display: flex;
   flex-direction: column;
@@ -356,32 +444,107 @@ p {
   left: 0;
   z-index: -2;
 }
-.about-description {
-  color: #141414;
+.about__description {
   font-size: 1.6rem;
   line-height: 2;
   margin-top: 2rem;
   text-align: center;
-  width: 90vw;
 }
-.about-description h2 {
+.about__description h2 {
   margin-bottom: 1rem;
 }
-.about-description hr {
+.about__description hr {
   margin: 0 auto;
   width: 220px;
 }
-.about-description p {
+.about__description p {
   margin-top: 2rem;
 }
-.about-image {
-  padding: 0 2rem;
+.about__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: none;
+  border: none;
 }
-.about-image figure img {
-  aspect-ratio: 2/1;
-  object-fit: cover;
-  border-radius: 1rem;
-  width: auto;
+.about__card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.01rem);
+  -webkit-backdrop-filter: blur(0.01rem);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  z-index: -1;
+}
+.about .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 3px solid #3f3f4b;
+  box-shadow: 5px 5px 0 0 #76767c;
+  border-radius: 5px;
+  padding: 2rem 0;
+  width: 300px;
+  height: 350px;
+}
+.about .card__content .card__title,
+.about .card__content .card__description,
+.about .card__content .avatar__image {
+  transition: transform 0.8s ease;
+}
+.about .card__content:hover .card__title,
+.about .card__content:hover .card__description,
+.about .card__content:hover .avatar__image {
+  transform: translateY(-14px);
+  transition: all 0.8s ease;
+}
+.about .card__content:hover .card__buttons {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.about .card__title, .about .card__description {
+  font-family: "Raleway", sans-serif;
+  color: #0e0e16;
+  word-spacing: 2px;
+}
+.about .card__title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+.about .card__description {
+  color: #a7a7af;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 4px;
+}
+.about .card__buttons {
+  transform: none;
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.about .card__buttons ul {
+  display: flex;
+  flex-direction: row;
+}
+.about .card__buttons ul li {
+  padding: 0 1rem;
+}
+.about .card__buttons ul li a i {
+  font-size: 3rem;
+  color: #0e0e16;
 }
 @media only screen and (min-width: 37.5em) {
   .about {
@@ -394,26 +557,26 @@ p {
     background-size: contain;
     transform: matrix(0, 1, 1, 0, 0, 0) rotate(270deg) translateY(25rem);
   }
-  .about-description {
+  .about__description {
     color: #fff;
-    padding: 0 1rem;
+    padding: 0 2rem;
     text-align: inherit;
-    width: 40vw;
   }
-  .about-description hr {
+  .about__description hr {
     margin: 0;
     width: 220px;
   }
-  .about-image figure img {
-    aspect-ratio: 2/1;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    height: 100%;
-    width: 30vw;
+  .about .card::before {
+    right: 100px;
+  }
+  .about .card__buttons {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(34px);
   }
 }
 
-/** Skills Section Styles */
+/** Skills Section Styles ------------------------------*/
 .skills {
   display: flex;
   flex-direction: column;
@@ -548,6 +711,29 @@ p {
   }
   .skills__lines, .skills__lines--2 {
     opacity: 1;
+  }
+}
+
+/** Footer Section Styles ------------------------------*/
+.footer__inner .icons {
+  padding: 1rem;
+}
+.footer__inner .icons__item a i {
+  font-size: 2rem;
+}
+.footer__inner .copyright__list li {
+  font-size: 1.6rem;
+  border: none;
+}
+.footer__inner .copyright__list li span {
+  font-weight: 300;
+}
+@media only screen and (min-width: 37.5em) {
+  .footer .copyright__list li {
+    padding: 0 1.4rem;
+  }
+  .footer .copyright__list li:not(:last-child) {
+    border-right: 1px solid #fff;
   }
 }
 
