@@ -26,17 +26,21 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="container-full">
-    <div class="loading">
-      <div class="loading__dev">{ <span id="loadingWord">
-        <span style="animation-delay: 246.232ms;">l</span>
-        <span>o</span>
-        <span>a</span>
-        <span>d</span>
-        <span>i</span>
-        <span>n</span>
-        <span>g</span>
-      </span> }</div>
-    </div>
+    <!-- <div class="loading">
+      <div class="loading__dev">
+        {
+        <span id="loadingWord">
+          <span style="animation-delay: 246.232ms">l</span>
+          <span>o</span>
+          <span>a</span>
+          <span>d</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+        </span>
+        }
+      </div>
+    </div> -->
     <!-- Header Section Starts Here -->
     <header class="header container-full" id="header">
       <div class="navbar">
@@ -157,8 +161,8 @@
     </main>
 
     <!-- About Section Starts Here-->
-    <section class="about container-full section" id="about">
-      <div class="about-description">
+    <section class="about container-full section-xl" id="about">
+      <div class="about__description col-md-5">
         <h2>About me</h2>
         <hr />
         <p>
@@ -169,21 +173,64 @@
           and reuse for other developers.
         </p>
       </div>
-      <div class="about-image">
-        <figure>
+      <div class="about__card card col-md-5 p-4">
+        <div class="card__content">
+          <div class="avatar">
+            <!-- <span class="avatar__bubble">Cool!</span> -->
+
+            <div class="avatar__image">
+              <!-- <img src="assets/images/my-avatar.svg" alt="" width="100" /> -->
+              <div class="avatar__svg">
+                <svg id="myAvatar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 260.85"><defs><style></style><clipPath id="clip-path"><path class="cls-1" d="M44,72.85a56,56,0,0,1,112,0V79a12,12,0,0,1,10,11.83v14a12,12,0,0,1-10.3,11.88A56.06,56.06,0,0,1,124,161.47v18.38h4a72,72,0,0,1,72,72v9H0v-9a72,72,0,0,1,72-72h4V161.47a56,56,0,0,1-31.69-44.74A12,12,0,0,1,34,104.85v-14A12,12,0,0,1,44,79Z"/></clipPath><clipPath id="clip-path-2"><path class="cls-1" d="M134,183.35c0,11.88-15,21.5-33.5,21.5S67,195.23,67,183.35a14,14,0,0,1,.39-3.3A72,72,0,0,0,0,251.91v8.94H200v-8.94a72,72,0,0,0-66.38-71.79A14,14,0,0,1,134,183.35Z"/></clipPath><clipPath id="clip-path-3"><path id="mouth__mask" class="cls-1" d="M81.12,130a19,19,0,0,0,37.77-.09,2.1,2.1,0,0,0-1.85-2H83.09A2.13,2.13,0,0,0,81.12,130Z"/></clipPath></defs><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><g id="my_avatar"><g id="Body"><g class="cls-2"><g id="skin_color"><path id="Color" class="cls-3" d="M-32,16.85H232v244H-32Z"/></g><path id="neck_shadow" class="cls-4" d="M44,110.85v8a56,56,0,0,0,112,0v-8a56,56,0,0,1-112,0Z"/></g></g><g id="clothes"><g class="cls-5"><g id="g_shirt"><g id="shirt_bg"><path id="_-Color-Fabric" data-name="↳-Color-Fabric" class="cls-1" d="M232,150.85h0v110H-32v-110Z"/><path id="_Color" data-name="🖍Color" class="cls-6" d="M-32,150.85H232v110H-32Z"/></g><g id="shirt_word"><g id="Graphic_Text" data-name="Graphic Text" class="cls-7"><text class="cls-8" transform="matrix(1, -0.01, 0.01, 1, 56, 246.47)">Hello world!</text><text id="_" data-name="}" class="cls-9" transform="translate(163.53 229.4) rotate(179.47)">{</text><text id="_2" data-name="{" class="cls-9" transform="translate(45.01 248.17)">{</text></g></g></g></g></g><g id="face"><g id="g_mouth"><path id="mouth" class="cls-10" d="M81.12,130a19,19,0,0,0,37.77-.09,2.1,2.1,0,0,0-1.85-2H83.09A2.13,2.13,0,0,0,81.12,130Z"/><g class="cls-11"><g id="mouth__parts"><path id="Teeth" class="cls-12" d="M111,116.85a5,5,0,0,1,5,5v6a5,5,0,0,1-5,5H90a5,5,0,0,1-5-5v-6a5,5,0,0,1,5-5Z"/><g id="Tongue"><path id="Tongue-2" data-name="Tongue" class="cls-13" d="M95,160.85a11,11,0,1,0-11-11A11,11,0,0,0,95,160.85Z"/><path id="Tongue-3" data-name="Tongue" class="cls-13" d="M105,160.85a11,11,0,1,0-11-11A11,11,0,0,0,105,160.85Z"/></g></g></g></g><g id="g_nose"><path id="nose" class="cls-14" d="M88,110.85c0,4.42,5.37,8,12,8h0c6.63,0,12-3.58,12-8"/></g><g id="g_eyes-closed" class="cls-15"><path class="cls-16" d="M116.4,96.47h0a14.8,14.8,0,0,1,21.18,0h0"/><path class="cls-16" d="M63.21,97.09h0a14.78,14.78,0,0,1,21.18,0h0"/></g><g id="g_eyes-open"><path id="eye" class="cls-17" d="M74,98.85a6,6,0,1,0-6-6A6,6,0,0,0,74,98.85Z"/><path id="eye-2" data-name="eye" class="cls-17" d="M126,98.85a6,6,0,1,0-6-6A6,6,0,0,0,126,98.85Z"/></g><g id="g_eyebrows"><g id="i_browse"><path id="eyebrow" class="cls-17" d="M59.63,80c3.92-5.51,14.65-8.6,23.89-6.33a2,2,0,0,0,1-3.88c-10.74-2.64-23.17.94-28.11,7.89A2,2,0,0,0,59.63,80Z"/><path id="eyebrow-2" data-name="eyebrow" class="cls-17" d="M117.63,80c3.92-5.51,14.65-8.6,23.89-6.33a2,2,0,0,0,1-3.88c-10.74-2.64-23.17.94-28.11,7.89A2,2,0,1,0,117.63,80Z"/></g></g></g><g id="top"><g id="accesory"><g id="Wayfarers"><path id="Left" class="cls-18" d="M66.24,114.85H69c14.72,0,25-8.43,25-20.5,0-10.37-1.82-20.5-23.53-20.5H67.53C45.82,73.85,44,84,44,94.35,44,107.19,52.31,114.85,66.24,114.85ZM48,95.35c0-8.66,0-15.5,19.39-15.5h3.22C90,79.85,90,86.69,90,95.35c0,9.13-8.64,15.5-21,15.5H66C51.12,110.85,48,102.42,48,95.35Z"/><path id="Right" class="cls-18" d="M128.24,114.85H131c14.72,0,25-8.43,25-20.5,0-10.37-1.82-20.5-23.53-20.5h-2.94C107.82,73.85,106,84,106,94.35,106,107.19,114.31,114.85,128.24,114.85ZM110,95.35c0-8.66,0-15.5,19.39-15.5h3.22C152,79.85,152,86.69,152,95.35c0,9.13-8.64,15.5-21,15.5h-3C113.12,110.85,110,102.42,110,95.35Z"/><path id="Stuff" class="cls-18" d="M38,79.62c.7-.67,8.26-5.77,29.55-5.77,17.85,0,21.63,1.86,27.35,4.65l.42.21a17.16,17.16,0,0,0,4.81.91,16.72,16.72,0,0,0,4.56-.87c6.53-3.17,12.92-4.9,27.86-4.9,21.29,0,28.85,5.1,29.54,5.77a2.92,2.92,0,0,1,3,2.89V85.4a2.92,2.92,0,0,1-3,2.88s-6.9,0-6.9,2.89-2-4.18-2-5.77V82.59a52.71,52.71,0,0,0-20.68-4c-11.84,0-17.74,2.1-22.8,4.18l.06.14v2l-2.22,5.35-2.74-1.09a14.14,14.14,0,0,0-1.5-.45,14,14,0,0,0-6-.27,8.07,8.07,0,0,0-1.89.63l-2.64,1.29-2.64-5.16.11-2.3.08-.19c-4.36-2-8.38-4.12-22.82-4.12a53,53,0,0,0-20.68,3.94V85.4c0,1.59-3,8.65-3,5.77S38,88.28,38,88.28a2.92,2.92,0,0,1-3-2.88V82.51A2.92,2.92,0,0,1,38,79.62Z"/></g></g><path id="hair" class="cls-19" d="M 145.89 16.49 c -5.77 -4.3 -12.58 -8 -19.69 -9.39 S 114.59 5.31 107.47 7 c -1.83 0.43 -2.45 0.87 -4.06 -0.17 C 102.05 6 92.58 -3.79 63.7 1.63 C 34.51 7.11 25.84 51 15 52.71 c -3.91 0.61 -8.73 -0.43 -8.88 -2.83 c -3.12 7.12 -5.12 20.12 7.88 29.12 a 32.23 32.23 0 0 0 18.74 4 a 25.22 25.22 0 0 0 7.89 -2 c 3.09 -1.36 5.56 -3.8 8.59 -5.09 a 60.65 60.65 0 0 1 -10.29 7.19 a 24.89 24.89 0 0 1 -5.73 2.27 c -1.38 0.38 -4.22 1.66 -5.55 1.32 a 40.65 40.65 0 0 0 25 -3.54 a 58.26 58.26 0 0 0 10.3 -6.14 c 3.18 -2.39 6.83 -4.83 9.32 -8 c -1 1.35 0.78 -0.66 1 -0.9 q 1 -1.05 2 -2.13 c 1.12 -1.24 2.23 -2.5 3.28 -3.8 A 83.17 83.17 0 0 0 77 73 C 92 65 93.76 49.43 96 46.49 c -2.14 6.4 2 13.51 -3 19.51 c 6 -1 10.41 -6.22 13.79 -10.47 a 33.14 33.14 0 0 0 6.85 -16.44 c 4.28 11.67 18.36 14.91 19.36 28.91 c 3 -7 3 -10 -0 -14 c 11 10 27.54 15.58 29 36 c 1.16 -5.34 4.88 -9.62 7 -19 a 81.21 81.21 0 0 0 1.93 -18.63 C 167 31 156.57 24.45 145.89 16.49 Z"/></g></g></g></g></svg>
+              </div>
+              <svg id="eyes" class="avatar__eyes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.62 17.95" width="30px" heigth="40px" >
+                <defs></defs>
+                <g data-name="Capa 2">
+                  <g id="Capa_1-2" data-name="Capa 1">
+                    <path
+                      class="eye-1"
+                      d="M61.61,12.37,63.27,11c6.14-5.27,13.21-5.27,19.35,0l1.66,1.42"
+                    />
+                    <path
+                      class="eye-2"
+                      d="M4.61,12.42h0a17.23,17.23,0,0,1,22.67,0h0"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <span class="card__title">Lucas Arrejoria</span>
+          <span class="card__description">Frontend Developer</span>
+          <div class="card__buttons">
+            <ul>
+              <li>
+                <a href="#"><i class="bi bi-briefcase"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- <figure>
           <img
             src="assets/images/about-img.png"
             alt="About Section Image"
             width="600"
           />
-        </figure>
+        </figure> -->
       </div>
     </section>
 
     <!-- Skills Section Starts Here -->
     <section
       id="skills"
-      class="skills container-full section row align-items-evenly mx-auto"
+      class="skills container-full section-xl row align-items-evenly mx-auto"
     >
       <div class="skills__intro col col-lg-6 col-xxl-6">
         <h2 class="skills__title">My Skills and Experience</h2>
@@ -198,66 +245,86 @@
         </p>
       </div>
 
-      <div class="skills__logos col col-lg-6  col-xxl-6">
+      <div class="skills__logos col col-lg-6 col-xxl-6">
         <div class="skills__logo logo">
-
-          <div class="logo__image invisible" style="animation-delay: 857.143ms;">
+          <div class="logo__image invisible" style="animation-delay: 857.143ms">
             <img src="assets/images/logos/vuejs-logo.svg" alt="" width="70" />
           </div>
 
-          <div class="logo__image" style="animation-delay: 214.286ms;">
-            <img src="assets/images/logos/jquery-logo.svg" alt="Jquery logo" width="70" />
+          <div class="logo__image" style="animation-delay: 214.286ms">
+            <img
+              src="assets/images/logos/jquery-logo.svg"
+              alt="Jquery logo"
+              width="70"
+            />
           </div>
 
-          <div class="logo__image" style="animation-delay: 428.571ms;" >
-            <img src="assets/images/logos/photoshop-logo.svg" alt="" width="70" />
+          <div class="logo__image" style="animation-delay: 428.571ms">
+            <img
+              src="assets/images/logos/photoshop-logo.svg"
+              alt=""
+              width="70"
+            />
           </div>
 
-          <div class="logo__image invisible" style="animation-delay: 857.143ms;">
+          <div class="logo__image invisible" style="animation-delay: 857.143ms">
             <img src="assets/images/logos/laravel-logo.svg" alt="" width="70" />
           </div>
 
-          <div class="logo__image" style="animation-delay: 642.761ms;">
+          <div class="logo__image" style="animation-delay: 642.761ms">
             <img src="assets/images/logos/css3-logo.svg" alt="" width="70" />
           </div>
 
-          <div class="logo__image" style="animation-delay: 857.143ms;">
+          <div class="logo__image" style="animation-delay: 857.143ms">
             <img src="assets/images/logos/php-logo.svg" alt="" width="70" />
           </div>
 
-          <div class="logo__image" style="animation-delay: 1071.164ms;">
+          <div class="logo__image" style="animation-delay: 1071.164ms">
             <img src="assets/images/logos/js-image-3.svg" alt="" width="70" />
           </div>
 
-          <div class="logo__image" style="animation-delay: 642.125ms;">
+          <div class="logo__image" style="animation-delay: 642.125ms">
             <img src="assets/images/logos/sass-logo.svg" alt="" width="70" />
           </div>
 
-          <div class="logo__image" style="animation-delay: 857.286ms;">
-            <img src="assets/images/logos/wordpress-logo.svg" alt="" width="70" />
+          <div class="logo__image" style="animation-delay: 857.286ms">
+            <img
+              src="assets/images/logos/wordpress-logo.svg"
+              alt=""
+              width="70"
+            />
           </div>
-          <div class="logo__image" style="animation-delay: 1071.431ms;">
+          <div class="logo__image" style="animation-delay: 1071.431ms">
             <img src="assets/images/logos/html5-logo.svg" alt="" width="70" />
           </div>
-          <div class="logo__image" style="animation-delay: 857.546ms;">
-            <img src="assets/images/logos/tailwind-logo.svg" alt="" width="70" />
+          <div class="logo__image" style="animation-delay: 857.546ms">
+            <img
+              src="assets/images/logos/tailwind-logo.svg"
+              alt=""
+              width="70"
+            />
           </div>
 
-          <div class="logo__image" style="animation-delay: 1500.232ms;">
-            <img src="assets/images/logos/bootstrap-logo.svg" alt="" width="70" />
+          <div class="logo__image" style="animation-delay: 1500.232ms">
+            <img
+              src="assets/images/logos/bootstrap-logo.svg"
+              alt=""
+              width="70"
+            />
           </div>
 
-
-
-          <div class="logo__image invisible" style="animation-delay: 1071.123ms;">
+          <div
+            class="logo__image invisible"
+            style="animation-delay: 1071.123ms"
+          >
             <img src="assets/images/logos/react-logo.svg" alt="" width="70" />
           </div>
-          
-          <div class="logo__image" style="animation-delay: 1285.554ms;">
+
+          <div class="logo__image" style="animation-delay: 1285.554ms">
             <img src="assets/images/logos/mysql-logo.svg" alt="" width="70" />
           </div>
 
-          <div class="logo__image" style="animation-delay: 1500.232ms;">
+          <div class="logo__image" style="animation-delay: 1500.232ms">
             <img src="assets/images/logos/figma-logo.svg" alt="" width="70" />
           </div>
         </div>
@@ -271,7 +338,6 @@
           <svg>
             <line x1="0" y1="138" x2="100%" y2="138" />
           </svg>
-
         </div>
         <div class="skills__lines--2">
           <svg>
@@ -287,13 +353,58 @@
       </div>
     </section>
 
-
     <!-- Portfolio Section Starts Here -->
-    <section id="portfolio" class="portfolio container section">
+    <section id="portfolio" class="portfolio container section-xl"></section>
 
-    </section>
     <!-- Footer Section Starts Here -->
-    <footer class=""></footer>
+    <footer id="footer" class="footer container-full section-md">
+      <div
+        class="footer__inner d-flex flex-column justify-content-center align-items-center gap-5"
+      >
+        <div class="icons">
+          <ul
+            aria-label="Social Icons List"
+            class="icons__list d-flex justify-content-center gap-4"
+          >
+            <li class="icons__item">
+              <a href="#">
+                <i class="bi bi-github"></i>
+              </a>
+            </li>
+
+            <li class="icons__item">
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+
+            <li class="icons__item">
+              <a href="#">
+                <i class="bi bi-envelope"></i>
+              </a>
+            </li>
+
+            <li class="icons__item">
+              <a href="#">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <ul
+            aria-label="Copyright List"
+            class="copyright__list d-flex justify-content-center"
+          >
+            <li>
+              &copy; <span>Copyright <span id="cpYear">2023</span></span>
+            </li>
+            <li>Design: <span>Arrejoria Lucas</span></li>
+            <li>Development: <span>Arrejoria Lucas</span></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
