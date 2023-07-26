@@ -7,7 +7,6 @@
 .tooltip-github {
   position: relative;
 }
-
 .tooltip-github::after {
   content: attr(data-tooltip);
   position: absolute;
