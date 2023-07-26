@@ -1,3 +1,55 @@
+// Mixin para estilos del tooltip
+@mixin tooltip-style {
+  // Estilos del tooltip
+  position: relative;
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: $tooltip-padding;
+    background-color: $tooltip-background;
+    color: $tooltip-text-color;
+    border-radius: 4px;
+    font-size: $tooltip-font-size;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Uso del mixin en diferentes elementos
+.tooltip-github {
+  @include tooltip-style;
+  &::after {
+    top: -50px;
+  }
+}
+
+.tooltip-linkedin {
+  @include tooltip-style;
+  &::after {
+    top: -50px;
+  }
+}
+
+.tooltip-portfolio {
+  @include tooltip-style;
+  &::after {
+    top: -50px;
+  }
+}
+
+// Flexbox Mixins
 @mixin flex-row {
   display: flex;
   flex-direction: row;
@@ -18,10 +70,10 @@
   justify-content: space-between;
 }
 
+// Query Mixins
 @mixin mediaQuery($breakpoint) {
-
   @if $breakpoint == smallPhone {
-    @media only screen and (min-width: $breakpoint-mobile-sm){
+    @media only screen and (min-width: $breakpoint-mobile-sm) {
       @content;
     }
   }

@@ -48,7 +48,7 @@ $code-background: #212539;
 /** Neutral Colors**/
 
 $dark-primary: #141414;
-$dark-gray: #3D3D3D;
+$dark-grey: #3D3D3D;
 $white: #fff;
 $black: #000;
 
@@ -60,3 +60,10 @@ $breakpoint-desktop: 90em;
 $breakpoint-desktop-medium: 105em;
 $breakpoint-desktop-large: 120em;
 $breakpoint-desktop-xlarge: 160em;
+
+
+/** Tooltip Variables */
+$tooltip-background: $grey-3;
+$tooltip-text-color: #fff;
+$tooltip-padding: 4px 8px;
+$tooltip-font-size: 14px;

@@ -1,4 +1,4 @@
-
+console.log('JS Loaded')
 
 
 const themeToggle = document.getElementById('theme-toggle');
@@ -29,3 +29,15 @@ const myAvatar = document.getElementById('myAvatar'),
       avHair = document.getElementById('hair');
 
 
+      //Visualizar burbuja al hacer scroll a su altura
+
+      const avatarBubble = document.getElementById('avatarBubble');
+
+      window.addEventListener("scroll", ()=> {
+        const avatarBubbleTop = avatarBubble.offsetTop + 500;
+        window.scrollY >= avatarBubbleTop ?  avatarBubble.classList.replace('hidden', 'show') : avatarBubble.classList.replace('show', 'hidden');
+      });
+      avatarCard.addEventListener('mouseover', ()=> {
+          avatarBubble.textContent = 'Cool!'
+          isHover = false
+      })

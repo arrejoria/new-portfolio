@@ -95,7 +95,7 @@
 
     #theme-toggle {
       border-radius: 10px;
-      border: 1px solid $dark-gray;
+      border: 1px solid $dark-grey;
       padding: 0.8rem;
       transition: all 0.5s ease-in-out;
 
@@ -276,21 +276,23 @@
 
       .card__title,
       .card__description,
-      .avatar__image {
+      .avatar__image,
+      .avatar__bubble {
         transition: transform 0.8s ease;
       }
       &:hover {
         .card__title,
         .card__description,
-        .avatar__image {
+        .avatar__image,
+        .avatar__bubble {
           transform: translateY(-14px);
-          transition: all 0.8s ease;
         }
-      }
-      &:hover .card__buttons {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0px);
+
+        .card__buttons {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0px);
+        }
       }
     }
 

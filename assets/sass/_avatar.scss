@@ -1,107 +1,146 @@
 .about {
-
-.card__content {
+  .card__content {
     &:is(:hover) {
-        #g_eyes-closed{
-            opacity: 1;
+      .divider-center {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.2s ease-out;
+      }
+      #g_eyes-closed {
+        opacity: 1;
+        .cls-16 {
+          stroke-width: 5;
         }
-        #g_eyes-open {
-            opacity: 0;
-        }
+      }
+      #g_eyes-open {
+        opacity: 0;
+      }
 
-        #hair {
-            d: path('M 145.89 16.49 c -5.77 -4.3 -12.58 -8 -19.69 -9.39 S 114.59 5.31 107.47 7 c -1.83 0.43 -2.45 0.87 -4.06 -0.17 C 102.05 6 92.58 -3.79 63.7 1.63 C 34.51 7.11 25.84 51 15 52.71 c -3.91 0.61 -8.73 -0.43 -8.88 -2.83 c -3.12 7.12 -5.12 20.12 8.88 26.12 a 32.23 32.23 0 0 0 18.74 4 a 25.22 25.22 0 0 0 7.89 -2 c 3.09 -1.36 5.56 -3.8 8.59 -5.09 a 60.65 60.65 0 0 1 -10.29 7.19 a 24.89 24.89 0 0 1 -5.73 2.27 c -1.38 0.38 -4.22 1.66 -5.55 1.32 a 40.65 40.65 0 0 0 25 -3.54 a 58.26 58.26 0 0 0 10.3 -6.14 c 3.18 -2.39 6.83 -4.83 9.32 -8 c -1 1.35 0.78 -0.66 1 -0.9 q 1 -1.05 2 -2.13 c 1.12 -1.24 2.23 -2.5 3.28 -3.8 A 83.17 83.17 0 0 0 74 72 C 92 65 93.76 49.43 96 46.49 c -2.14 6.4 2 13.51 -2 17.51 c 6 -1 10.41 -6.22 13.79 -10.47 a 33.14 33.14 0 0 0 6.21 -13.53 c 4.28 11.67 18.36 14.91 20 27 c 3 -7 3 -10 0 -12 c 11 10 27.54 15.58 29 35 c 1.16 -5.34 4.88 -9.62 7 -19 a 81.21 81.21 0 0 0 1.93 -18.63 C 167 31 156.57 24.45 145.89 16.49 Z')!important;
-        }
+      // #hair {
+      //     d: path('M 145.89 16.49 c -5.77 -4.3 -12.58 -8 -19.69 -9.39 S 114.59 5.31 107.47 7 c -1.83 0.43 -2.45 0.87 -4.06 -0.17 C 102.05 6 92.58 -3.79 63.7 1.63 C 34.51 7.11 25.84 51 15 52.71 c -3.91 0.61 -8.73 -0.43 -8.88 -2.83 c -3.12 7.12 -5.12 20.12 8.88 26.12 a 32.23 32.23 0 0 0 18.74 4 a 25.22 25.22 0 0 0 7.89 -2 c 3.09 -1.36 5.56 -3.8 8.59 -5.09 a 60.65 60.65 0 0 1 -10.29 7.19 a 24.89 24.89 0 0 1 -5.73 2.27 c -1.38 0.38 -4.22 1.66 -5.55 1.32 a 40.65 40.65 0 0 0 25 -3.54 a 58.26 58.26 0 0 0 10.3 -6.14 c 3.18 -2.39 6.83 -4.83 9.32 -8 c -1 1.35 0.78 -0.66 1 -0.9 q 1 -1.05 2 -2.13 c 1.12 -1.24 2.23 -2.5 3.28 -3.8 A 83.17 83.17 0 0 0 74 72 C 92 65 93.76 49.43 96 46.49 c -2.14 6.4 2 13.51 -2 17.51 c 6 -1 10.41 -6.22 13.79 -10.47 a 33.14 33.14 0 0 0 6.21 -13.53 c 4.28 11.67 18.36 14.91 20 27 c 3 -7 3 -10 0 -12 c 11 10 27.54 15.58 29 35 c 1.16 -5.34 4.88 -9.62 7 -19 a 81.21 81.21 0 0 0 1.93 -18.63 C 167 31 156.57 24.45 145.89 16.49 Z')!important;
+      // }
     }
-}
-// Inner SVG Styles
-.avatar__svg {
+  }
+  // Inner SVG Styles
+  .avatar__svg {
     transition: all 1s ease-in-out;
 
-    .cls-1, .cls-16{fill:none;}
-    .cls-2{clip-path:url(#clip-path);}
-    .cls-3{fill:#edb98a;}
-    .cls-10,.cls-13,.cls-14,.cls-17,.cls-18,.cls-19,.cls-3,.cls-4,.cls-6{fill-rule:evenodd;}
-    .cls-4{fill-opacity:0.1;}
-    .cls-5{clip-path:url(#clip-path-2);}
-    .cls-6{fill:#262e33;}
-    .cls-7{opacity:0.9;}
-    .cls-8{font-size:16px;font-family:Verdana;}
-    .cls-8,.cls-9{fill:#efefef;}
-    .cls-9{font-size:28px;font-family:BernardMT-Condensed, Bernard MT Condensed;}
-    .cls-10{fill-opacity:0.7;}
-    .cls-11{clip-path:url(#clip-path-3);}
-    .cls-12{fill:#fff;}
-    .cls-13{fill:#ff4f6d;}
-    .cls-14{fill-opacity:0.16;}
-    .cls-15{opacity:0;}
-    .cls-16{stroke:#282828;stroke-miterlimit:10;stroke-width:10px;}
-    .cls-17{fill-opacity:0.6;}
-    .cls-18{fill:#252c2f;}
-}
+    .cls-1,
+    .cls-16 {
+      fill: none;
+    }
+    .cls-2 {
+      clip-path: url(#clip-path);
+    }
+    .cls-3 {
+      fill: #edb98a;
+    }
+    .cls-10,
+    .cls-13,
+    .cls-14,
+    .cls-17,
+    .cls-18,
+    .cls-19,
+    .cls-3,
+    .cls-4,
+    .cls-6 {
+      fill-rule: evenodd;
+    }
+    .cls-4 {
+      fill-opacity: 0.1;
+    }
+    .cls-5 {
+      clip-path: url(#clip-path-2);
+    }
+    .cls-6 {
+      fill: #262e33;
+    }
+    .cls-7 {
+      opacity: 0.9;
+    }
+    .cls-8 {
+      font-size: 16px;
+      font-family: Verdana;
+    }
+    .cls-8,
+    .cls-9 {
+      fill: #efefef;
+    }
+    .cls-9 {
+      font-size: 28px;
+      font-family: BernardMT-Condensed, Bernard MT Condensed;
+    }
+    .cls-10 {
+      fill-opacity: 0.7;
+    }
+    .cls-11 {
+      clip-path: url(#clip-path-3);
+    }
+    .cls-12 {
+      fill: #fff;
+    }
+    .cls-13 {
+      fill: #ff4f6d;
+    }
+    .cls-14 {
+      fill-opacity: 0.16;
+    }
+    .cls-15 {
+      opacity: 0;
+    }
+    .cls-16 {
+      stroke: #282828;
+      stroke-miterlimit: 10;
+      stroke-width: 10px;
+    }
+    .cls-17 {
+      fill-opacity: 0.6;
+    }
+    .cls-18 {
+      fill: #252c2f;
+    }
+  }
 
-// Styles outside de svg
+  // Styles outside de svg
   .avatar {
     position: relative;
 
     &__bubble {
       position: absolute;
       top: -10px;
-      right: -50px;
+      left: 100%;
+      background-color: $white;
+      border: 2px solid $grey-5;
+      border-radius: 10px 10px 10px 0;
       color: $black-4;
-      padding: 0.8rem;
-      background: radial-gradient(circle at 50%, (black black));
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 15px;
-        height: 15px;
-        border-right: 1px solid $black-1;
-        background-color: #fff;
-        transform: translate(1px, 15px) rotate(200deg);
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 15px;
-        height: 15px;
-        border-bottom: 1px / 2px solid $black-1;
-        transform: translate(1px, 15px) rotate(0);
-      }
+      padding: 1rem;
+      text-align: center;
+      transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      white-space: nowrap;
+      width: auto;
     }
+
     &__image {
       position: relative;
-      background-color: $grey-6;
-      border-radius: 10px;
       margin-bottom: 1rem;
       width: 100px;
 
-      #eyes {
-        opacity: 0;
+      &::after {
+        content: "";
         position: absolute;
-        top: 37%;
-        left: 35%;
-
-        .eye-1 {
-          fill: none;
-          stroke: #282828;
-          stroke-miterlimit: 5;
-          stroke-width: 13;
-          stroke-linecap: round;
-        }
-
-        .eye-2 {
-          fill: none;
-          stroke: #282828;
-          stroke-miterlimit: 5;
-          stroke-width: 13;
-          stroke-linecap: round;
-        }
+        bottom: 0;
+        border-radius: 10px 10px 0px 0px;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background-color: $grey-6;
+        z-index: 1;
       }
+    }
+
+    &__svg {
+      position: inherit;
+      z-index: 2;
     }
   }
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Raleway:wght@100;300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Raleway:wght@100;300;400;700;900&display=swap");
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 10 PX = 1rem**/
@@ -19,7 +19,6 @@ html {
   //   background-color: #141414;
   //   color: #f9f9f9;
   // }
-
 }
 
 * {
@@ -51,7 +50,6 @@ body {
       background-position: center;
     }
   }
-
 }
 
 .container {
@@ -95,4 +93,59 @@ body {
 .w-20 {
   width: 100%;
   max-width: 25%;
+}
+
+.divider-center {
+  position: relative;
+  border: 2px solid $grey-5;
+  border-radius: 50%;
+  margin: 1rem 0;
+  width: 5px;
+  height: 2px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -60px;
+    top: 0;
+    border: 1px solid $grey-5;
+    width: 50px;
+    height: 1px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: 0;
+    border: 1px solid $grey-5;
+    width: 50px;
+    height: 1px;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Estilos del tooltip
+.tooltip {
+  position: relative;
+
+  &::after {
+
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
