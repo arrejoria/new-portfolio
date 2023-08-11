@@ -86,7 +86,7 @@
         &-item {
           margin: 0 1rem;
           a {
-            svg {
+            svg { 
             }
           }
         }
@@ -353,9 +353,7 @@
       }
     }
     .card {
-      &::before {
-        right: 100px;
-      }
+
 
       &__buttons {
         opacity: 0;

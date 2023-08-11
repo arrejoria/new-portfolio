@@ -1,43 +1,43 @@
-console.log('JS Loaded')
+console.log("JS Loaded");
 
+document.addEventListener('DOMContentLoaded', () => {
+  const avatarCard = document.querySelector(".card__content");
+  const avatarBubble = document.getElementById("avatarBubble");
 
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme) {
-  body.classList.add(currentTheme);
-} else {
-  body.classList.add('light');
-}
-
-themeToggle.addEventListener('click', () => {
-  if (body.classList.contains('light')) {
-    body.classList.replace('light', 'dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    body.classList.replace('dark', 'light');
-    localStorage.setItem('theme', 'light');
+  function addEvent(event, element, callback) {
+    element.addEventListener(event, callback);
   }
+
+  function showBubble() {
+    const avatarBubbleTop = avatarBubble.offsetTop + 500;
+    if (window.scrollY >= avatarBubbleTop) {
+      avatarBubble.classList.replace("hidden", "show");
+    } else {
+      avatarBubble.classList.replace("show", "hidden");
+    }
+  }
+
+  function handleAvatarMessage() {
+    function setMessage(message) {
+      avatarBubble.textContent = message;
+    }
+
+    function firstMessage() {
+      setMessage("Cool!");
+    }
+
+    function secondMessage() {
+      setMessage("Thank you!");
+    }
+
+    function attachMessageEvents() {
+      addEvent('mouseover', avatarCard, firstMessage);
+      addEvent('mouseleave', avatarCard, secondMessage);
+    }
+
+    attachMessageEvents();
+  }
+
+  window.addEventListener("scroll", showBubble);
+  handleAvatarMessage();
 });
-
-
-
-// Avatar Scripts
-const avatarCard = document.querySelector('.card__content');
-const myAvatar = document.getElementById('myAvatar'), 
-      avHair = document.getElementById('hair');
-
-
-      //Visualizar burbuja al hacer scroll a su altura
-
-      const avatarBubble = document.getElementById('avatarBubble');
-
-      window.addEventListener("scroll", ()=> {
-        const avatarBubbleTop = avatarBubble.offsetTop + 500;
-        window.scrollY >= avatarBubbleTop ?  avatarBubble.classList.replace('hidden', 'show') : avatarBubble.classList.replace('show', 'hidden');
-      });
-      avatarCard.addEventListener('mouseover', ()=> {
-          avatarBubble.textContent = 'Cool!'
-          isHover = false
-      })

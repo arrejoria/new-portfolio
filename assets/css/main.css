@@ -758,9 +758,6 @@ p {
     margin: 0;
     width: 220px;
   }
-  .about .card::before {
-    right: 100px;
-  }
   .about .card__buttons {
     opacity: 0;
     visibility: hidden;
