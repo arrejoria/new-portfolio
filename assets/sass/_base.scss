@@ -124,6 +124,13 @@ body {
   }
 }
 
+.inactive {
+  display: none;
+}
+.active {
+  display: flex;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;

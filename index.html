@@ -51,7 +51,7 @@
               media="(max-width: 600px)"
             />
             <img
-              src="assets/images/logo-desktop_2x.webp"
+              src="assets/images/logo-desktop.png"
               alt="Logo Site Desktop"
               width="160"
             />
@@ -160,7 +160,7 @@
       <a href="#about" class="main-button">Discover</a>
     </main>
 
-    <!-- About Section Starts Here--> 
+    <!-- About Section Starts Here-->
     <section class="about container-full section-xl" id="about">
       <div class="about__description col-md-5 px-4">
         <h2>About me</h2>
@@ -176,11 +176,13 @@
       <div class="about__card card col-md-5 p-4">
         <div class="card__content">
           <div class="avatar">
-            <span id="avatarBubble" class="avatar__bubble hidden">Hi, hover me</span>
+            <span id="avatarBubble" class="avatar__bubble hidden"
+              >Hi, hover me</span
+            >
 
             <div class="avatar__image">
               <!-- <img src="assets/images/my-avatar.svg" alt="" width="100" /> -->
-              <div class="avatar__svg"> 
+              <div class="avatar__svg">
                 <svg
                   id="myAvatar"
                   xmlns="http://www.w3.org/2000/svg"
@@ -257,7 +259,7 @@
                                   >
                                     Hello world!
                                   </text>
-                                    </g>
+                                </g>
                               </g>
                             </g>
                           </g>
@@ -378,14 +380,32 @@
           <div class="divider-center"></div>
           <div class="card__buttons">
             <ul>
-              <li >
-                <a href="#" class="tooltip-cs tooltip-portfolio" data-tooltip="Portfolio"><i class="bi bi-briefcase"></i></a>
+              <li>
+                <a
+                  href="#"
+                  class="tooltip-cs tooltip-portfolio"
+                  data-tooltip="Portfolio"
+                  target="_blank"
+                  ><i class="bi bi-briefcase"></i
+                ></a>
               </li>
-              <li >
-                <a href="#" class="tooltip-cs tooltip-github" data-tooltip="GitHub"><i class="bi bi-github"></i></a>
+              <li>
+                <a
+                  href="#"
+                  class="tooltip-cs tooltip-github"
+                  data-tooltip="GitHub"
+                  target="_blank"
+                  ><i class="bi bi-github"></i
+                ></a>
               </li>
-              <li >
-                <a href="#" class="tooltip-cs tooltip-linkedin" data-tooltip="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <li>
+                <a
+                  href="#"
+                  class="tooltip-cs tooltip-linkedin"
+                  data-tooltip="LinkedIn"
+                  target="_blank"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
               </li>
             </ul>
           </div>
@@ -401,7 +421,7 @@
     </section>
 
     <!-- Skills Section Starts Here -->
-    <section
+    <!-- <section
       id="skills"
       class="skills container-full section-xl row align-items-evenly mx-auto"
     >
@@ -524,8 +544,68 @@
           </svg>
         </div>
       </div>
-    </section>
+    </section> -->
 
+    <section id="skills" class="skills container-mx section-md">
+      <div class="skills__inner col-lg-6 col-xl-6">
+        <h1 class="text-center">What I Know</h1>
+        <p class="skills__inner-text">
+          Throughout my career as a web developer, I have gained strong
+          knowledge and experience in various technologies and tools. I am
+          committed to excellence in web development and always strive to learn
+          and improve my skills to provide high-quality solutions to my clients.
+          Below, I present some of the technologies in which I specialize and
+          have worked on significant projects.
+        </p>
+
+        <!-- <button type="button" class="skills__inner-button text-uppercase mx-auto btn btn-outline-light">View</button> -->
+      </div>
+      <div class="stack">
+        <div class="stack__category">
+          <div class="stack__category-header">
+            <h2 class="stack__category-title text-uppercase" data-heading="Frontend">Frontend</h2>
+          </div>
+          <div class="stack__category-content active">
+            <div class="stack__section-skills">
+              <h3 class="stack__section-skills-title text-uppercase text-center">Current Skills</h3>
+              <div class="stack__skill">
+                  <img class="stack__skill-image" src="assets/images/logos/js-image-3.svg" alt="Javascript Logo" width="20" height="40">
+                  <span class="stack__skill-caption">JS</span>
+                </div>
+    
+              <div class="stack__skill">
+                  <img class="stack__skill-image" src="assets/images/logos/html5-logo.svg" alt="HTML5 Logo" width="25" height="40">
+                  <span class="stack__skill-caption">HTML</span>
+                </div>
+    
+              <div class="stack__skill">
+                  <img class="stack__skill-image" src="assets/images/logos/css3-logo.svg" alt="CSS3 Logo" width="20" height="40">
+                  <span class="stack__skill-caption">CSS3</span>
+              </div>
+            </div>
+
+            <div class="stack__section-skills">
+              <h3 class="stack__section-skills-title text-uppercase text-center">Framework</h3>
+              <div class="stack__skill">
+                  <img class="stack__skill-image" src="assets/images/logos/js-image-3.svg" alt="Javascript Logo" width="40" height="70">
+                  <span class="stack__skill-caption">JS</span>
+                </div>
+    
+              <div class="stack__skill">
+                  <img class="stack__skill-image" src="assets/images/logos/html5-logo.svg" alt="HTML5 Logo" width="40" height="70">
+                  <span class="stack__skill-caption">HTML</span>
+                </div>
+    
+              <div class="stack__skill">
+                  <img class="stack__skill-image" src="assets/images/logos/css3-logo.svg" alt="CSS3 Logo" width="40" height="70">
+                  <span class="stack__skill-caption">CSS3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </section>
     <!-- Portfolio Section Starts Here -->
     <section id="portfolio" class="portfolio container section-xl"></section>
 
@@ -579,7 +659,11 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS"
+      crossorigin="anonymous"
+    ></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
