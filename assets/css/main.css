@@ -299,7 +299,7 @@ h3,
 h4 {
   font-family: "Pathway Gothic One", sans-serif;
   margin: 0 0 5rem 0;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 h1 {
@@ -307,7 +307,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4.8rem;
+  font-size: 4.5rem;
 }
 
 h3 {
@@ -726,7 +726,7 @@ p {
   text-transform: uppercase;
 }
 .about .card__description {
-  color: #a7a7af;
+  color: #76767c;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   letter-spacing: 4px;
@@ -794,40 +794,7 @@ p {
   padding: 1.5rem 5rem;
 }
 .skills .stack {
-  display: flex;
-  flex-direction: row;
-}
-.skills .stack__category {
-  display: flex;
-  flex-direction: row;
-  background-color: inherit;
-  height: auto;
-}
-.skills .stack__category-header {
-  background-color: #fff;
-  cursor: pointer;
-  padding: 2rem 1rem;
-  transition-property: background-color;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in;
-  text-transform: uppercase;
-  height: 100%;
-  max-height: 250px;
-}
-.skills .stack__category-title {
-  color: #fff;
-  font-size: 4.5rem;
-  font-weight: 800;
-  margin: 1rem;
-  text-shadow: -2px -2px 0 #000, -2px -1px 0 #000, -2px 0px 0 #000, -2px 1px 0 #000, -2px 2px 0 #000, -1px -2px 0 #000, -1px -1px 0 #000, -1px 0px 0 #000, -1px 1px 0 #000, -1px 2px 0 #000, 0px -2px 0 #000, 0px -1px 0 #000, 0px 0px 0 #000, 0px 1px 0 #000, 0px 2px 0 #000, 1px -2px 0 #000, 1px -1px 0 #000, 1px 0px 0 #000, 1px 1px 0 #000, 1px 2px 0 #000, 2px -2px 0 #000, 2px -1px 0 #000, 2px 0px 0 #000, 2px 1px 0 #000, 2px 2px 0 #000;
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
-  letter-spacing: 5px;
-}
-.skills .stack__category-content {
-  height: auto;
-  max-height: 300px;
-  padding: 0 1rem;
+  width: 100%;
 }
 .skills .stack__section-skills {
   display: flex;
@@ -840,19 +807,16 @@ p {
   margin-bottom: 1rem;
 }
 .skills .stack__skill {
-  display: flex;
-  flex: 1 0 auto;
   width: 100%;
-  height: auto;
-  max-width: 100px;
 }
-.skills .stack__skill-image {
-  margin-bottom: 1rem;
-  aspect-ratio: 1/1;
-  object-fit: contain;
+.skills .stack__skill-bar {
+  background-color: #a7a7af;
+  height: 6px;
 }
-.skills .stack__skill-caption {
-  font-size: 1.5rem;
+.skills .stack__skill-percent {
+  background-color: #5862ce;
+  height: 6px;
+  width: 0;
 }
 
 /** Footer Section Styles ------------------------------*/

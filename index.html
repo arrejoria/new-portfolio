@@ -546,7 +546,7 @@
       </div>
     </section> -->
 
-    <section id="skills" class="skills container-mx section-md">
+    <section id="skills" class="skills container-full section-md">
       <div class="skills__inner col-lg-6 col-xl-6">
         <h1 class="text-center">What I Know</h1>
         <p class="skills__inner-text">
@@ -560,50 +560,112 @@
 
         <!-- <button type="button" class="skills__inner-button text-uppercase mx-auto btn btn-outline-light">View</button> -->
       </div>
-      <div class="stack">
-        <div class="stack__category">
-          <div class="stack__category-header">
-            <h2 class="stack__category-title text-uppercase" data-heading="Frontend">Frontend</h2>
-          </div>
-          <div class="stack__category-content active">
-            <div class="stack__section-skills">
-              <h3 class="stack__section-skills-title text-uppercase text-center">Current Skills</h3>
-              <div class="stack__skill">
-                  <img class="stack__skill-image" src="assets/images/logos/js-image-3.svg" alt="Javascript Logo" width="20" height="40">
-                  <span class="stack__skill-caption">JS</span>
-                </div>
-    
-              <div class="stack__skill">
-                  <img class="stack__skill-image" src="assets/images/logos/html5-logo.svg" alt="HTML5 Logo" width="25" height="40">
-                  <span class="stack__skill-caption">HTML</span>
-                </div>
-    
-              <div class="stack__skill">
-                  <img class="stack__skill-image" src="assets/images/logos/css3-logo.svg" alt="CSS3 Logo" width="20" height="40">
-                  <span class="stack__skill-caption">CSS3</span>
-              </div>
-            </div>
-
-            <div class="stack__section-skills">
-              <h3 class="stack__section-skills-title text-uppercase text-center">Framework</h3>
-              <div class="stack__skill">
-                  <img class="stack__skill-image" src="assets/images/logos/js-image-3.svg" alt="Javascript Logo" width="40" height="70">
-                  <span class="stack__skill-caption">JS</span>
-                </div>
-    
-              <div class="stack__skill">
-                  <img class="stack__skill-image" src="assets/images/logos/html5-logo.svg" alt="HTML5 Logo" width="40" height="70">
-                  <span class="stack__skill-caption">HTML</span>
-                </div>
-    
-              <div class="stack__skill">
-                  <img class="stack__skill-image" src="assets/images/logos/css3-logo.svg" alt="CSS3 Logo" width="40" height="70">
-                  <span class="stack__skill-caption">CSS3</span>
+      <div class="row stack">
+        <div class="col-lg-4 stack__section-skills">
+          <h3 class="stack__section-skills-title text-uppercase text-center">
+            Skills
+          </h3>
+          <div class="stack__skill" data-scroll>
+            <div class="stack__skill-progress"  data-scroll>
+              <span class="stack__skill-name"
+                >HTML
+                <i class="stack__skill-level">SR</i>
+              </span>
+              <div class="stack__skill-bar">
+                <div
+                  class="stack__skill-percent"
+                  id="progressBar"
+                  role="progressbar"
+                  aria-valuenow="99"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
             </div>
           </div>
         </div>
-      
+
+        <div class="col-lg-4 stack__section-skills">
+          <h3 class="stack__section-skills-title text-uppercase text-center">
+            Frameworks
+          </h3>
+          <div class="stack__skill">
+            <div class="stack__skill-progress"  data-scroll>
+              <span class="stack__skill-name"
+                >HTML
+                <i class="stack__skill-level">SR</i>
+              </span>
+              <div class="stack__skill-bar">
+                <div
+                  class="stack__skill-percent"
+                  id="progressBar"
+                  role="progressbar"
+                  aria-valuenow="19"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+
+            <div class="stack__skill-progress"  data-scroll>
+              <span class="stack__skill-name"
+                >HTML
+                <i class="stack__skill-level">SR</i>
+              </span>
+              <div class="stack__skill-bar">
+                <div
+                  class="stack__skill-percent"
+                  id="progressBar"
+                  role="progressbar"
+                  aria-valuenow="19"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+
+            <div class="stack__skill-progress"  data-scroll>
+              <span class="stack__skill-name"
+                >HTML
+                <i class="stack__skill-level">SR</i>
+              </span>
+              <div class="stack__skill-bar">
+                <div
+                  class="stack__skill-percent"
+                  id="progressBar"
+                  role="progressbar"
+                  aria-valuenow="19"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 stack__section-skills">
+          <h3 class="stack__section-skills-title text-uppercase text-center">
+            Learning
+          </h3>
+          <div class="stack__skill" data-scroll>
+            <div class="stack__skill-progress"  data-scroll>
+              <span class="stack__skill-name"
+                >HTML
+                <i class="stack__skill-level">SR</i>
+              </span>
+              <div class="stack__skill-bar">
+                <div
+                  class="stack__skill-percent"
+                  id="progressBar"
+                  role="progressbar"
+                  aria-valuenow="99"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Portfolio Section Starts Here -->
@@ -664,6 +726,7 @@
       integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha384-poC0r6usQOX2Ayt/VGA+t81H6V3iN9L+Irz9iO8o+s0X20tLpzc9DOOtnKxhaQSE" crossorigin="anonymous"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
